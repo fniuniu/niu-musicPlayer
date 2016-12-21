@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!--
+		<meta name="viewport" content="width-device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+		-->
+		<link rel="stylesheet" href="css/myMusicPlayer.css" type="text/css" />
+		<title>我的音乐播放器</title>
+
+	</head>
+
+	<body>
+		<div class="play-container">
+
+			<div class="frosted-glass"></div>
+
+			<audio id="id-audio-player">
+				<source src="songs/Yesterday Once More.mp3">
+			</audio>
+
+			<img id="id-img-left" src="images/左上图.jpg" alt="风景"/>
+
+			<div id="id-text">
+				<h1 id="id-h1-song-title">歌名</h1>
+				<em>歌手</em>
+			</div>
+
+			<div id="id-play-controls">
+				<div class="circle-prev circle button" data-action="prev">
+					<div class="rectangle-left rectangle"></div>
+					<div class="triangle-left1 triangle-left"></div>
+					<div class="triangle-left2 triangle-left"></div>
+				</div>
+				<div class="circle-play button" data-action="play">
+					<div class="triangle-right"></div>
+					<div class="stop-rectangle first off"></div>
+					<div class="stop-rectangle second off"></div>
+				</div>
+				<div class="circle-next circle button" data-action="next">
+					<div class="rectangle-left rectangle"></div>
+					<div class="triangle-left1 triangle-left"></div>
+					<div class="triangle-left2 triangle-left"></div>
+				</div>
+			</div>
+
+			<div id="id-volume">
+				<input class="volume-slider active" type="range" value="0" min="0" max="100">
+				<div class="icon-laba">
+					<i></i>
+					<b></b>
+				</div>
+			</div>
+
+			<div class="slider yellow"></div>
+
+			<div id="id-player-time">
+				<time class="time-current player-time">0:00</time>
+				<div class="time-slash player-time">/</div>
+	            <time class="time-duration player-time">0:00</time>
+			</div>
+
+			<div class="songs-list">
+				<ul class='songs-list vertical-center'>
+	                <li class='single-song current-song'>Yesterday Once More.mp3</li>
+	                <li class='single-song'>绝世.mp3</li>
+	                <li class='single-song'>早知如此.mp3</li>
+					<li class='single-song'>每当那样时.mp3</li>
+
+	            </ul>
+			</div>
+
+		</div>
+
+	    <script src="js/jquery.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/myMusicPlayer.js"></script>
+
+	</body>
+</html>

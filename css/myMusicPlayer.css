@@ -1,0 +1,357 @@
+/*我的音乐播放器css*/
+.play-container {
+    position: relative;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 640px;
+    height: 320px;
+    margin: 0 auto;
+    box-shadow: 1px 1px 1px #333333;
+
+
+}
+
+.frosted-glass{
+    width: 640px;
+    height: 320px;
+    background: inherit;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(5px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);
+}
+
+#id-img-left {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height:200px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#id-text {
+    display: inline-block;
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    top: 30px;
+    right: 30px;
+    margin: 0;
+    color: white;
+
+
+}
+h1 {
+    margin: 0px;
+    font-family: "Arial Narrow", "Times New Roman";
+}
+em {
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+}
+
+#id-play-controls {
+    display: inline-block;
+    position: absolute;
+    width: 340px;
+    height: 60px;
+    left: 270px;
+    top: 170px;
+    margin: 0;
+}
+.circle-prev {
+    box-shadow: 0 4px 2px black;
+}
+.circle {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    top: -5px;
+    border-radius: 25px;
+    background: #5b5b5b;
+
+}
+
+
+.rectangle {
+    position: absolute;
+    display: inline-block;
+    width: 3px;
+    height: 14px;
+    background: #adadad;
+    top: 18px;
+    left: 12px;
+
+
+}
+.triangle-left {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 14px solid #adadad;
+    border-bottom: 7px solid transparent;
+}
+.triangle-left1 {
+    top: 18px;
+    left: 11px;
+}
+.triangle-left2 {
+    top: 18px;
+    left: 22px;
+}
+
+.circle-play {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background: #565656;
+    text-align: center;
+    box-shadow: 0 4px 2px black;
+}
+
+.triangle-right {
+    position: relative;
+    margin: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid #adadad;
+    border-bottom: 10px solid transparent;
+    top: 20px;
+    left: 22px;
+}
+.circle-play > .off {
+    display: none;
+}
+
+.stop-rectangle {
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    background: #adadad;
+    top: 18px;
+    left: 12px;
+}
+.first {
+    left: 22px;
+}
+.second {
+    left: 32px;
+}
+
+
+.circle-next {
+    transform:rotate(180deg);
+    box-shadow: 0 -4px 2px black;
+}
+
+#id-volume > .active {
+    display: none;
+}
+
+#id-volume {
+    position: absolute;
+    display: inline-block;
+    top: 190px;
+    right: 30px;
+}
+
+.volume-slider {
+    position: absolute;
+    top: -60px;
+    left: -45px;
+    transform: rotate(-90deg);
+    background-color: #ffd700;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100px;
+    border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 10px;
+    border-radius: 10px; /*将轨道设为圆角的*/
+    box-shadow: inset 0 0 4px rgba(163, 18, 0, 0.7), inset 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    margin-top: -2px; /*使滑块超出轨道部分的偏移量相等*/
+    background: #ffffff;
+    border-radius: 50%; /*外观设置为圆形*/
+    border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+    box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+
+.icon-laba {
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.icon-laba i,
+.icon-laba b {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 5px;
+    overflow: hidden;
+}
+
+.icon-laba i,
+.icon-laba b {
+    width: 16px;
+    height: 16px;
+    left: 15px;
+    top: 50%;
+    margin-top: -8px;
+    transform: rotate(-45deg);
+}
+
+.icon-laba i:before,
+.icon-laba b:before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: -16px 0 0 -16px;
+  border-radius: 999px;
+  border: 2px solid #ababab;
+}
+
+.icon-laba i {
+  left: 12px;
+  margin-top: -9px;
+}
+
+.icon-laba b {
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  margin-top: -7px;
+}
+
+.icon-laba b:before {
+  width: 22px;
+  height: 22px;
+  margin-left: -12px 0 0 -12px;
+}
+
+.icon-laba:before,
+.icon-laba:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #ababab;
+}
+
+.icon-laba:before {
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+}
+.icon-laba:after {
+  background: none;
+  border-left: 12px transparent solid;
+  border-bottom: 12px transparent solid;
+  border-top: 12px transparent solid;
+  border-right: #ababab 12px solid;
+  left: -12px;
+  top: 50%;
+  margin-top: -12px;
+}
+
+
+.play-container > .slider {
+  position: relative;
+  bottom: 63px;
+  margin: 0 auto;
+  width: 580px;
+  display: block;
+  background: #565656;
+  height: 14px;
+  box-shadow: 0 0px 0px rgba(255, 255, 255, 0.25), inset 0 0 4px rgba(0, 0, 0, 0.9);
+  border-radius: 14px;
+}
+.play-container > .slider div.ui-slider-range {
+  display: block;
+  height: 14px;
+  border-radius: 14px;
+  transition-property: background-color;
+  transition-duration: 100ms;
+}
+
+.play-container > .slider.yellow div.ui-slider-range {
+  background-color: #ffd700;
+  box-shadow: inset 0 0 4px rgba(163, 18, 0, 0.7), inset 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.play-container > .slider.yellow div.ui-slider-range.hilite, .slider.yellow div.ui-slider-range.dragging {
+  background-color: #ffcc33;
+}
+
+.play-container > .slider a.ui-slider-handle {
+  position: absolute;
+  top: -2px;
+  margin-left: -9px;
+  z-index: 2;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background-color: #d4d4d4;
+  background-size: 100% 100%;
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.4), inset 0 0px 1px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.6), 0 4px 2px rgba(0, 0, 0, 0.2), 0 9px 4px rgba(0, 0, 0, 0.1), inset 0 2px 1px white;
+  outline: none;
+}
+.play-container > .slider a.ui-slider-handle:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: -1px;
+  top: -4px;
+  background-color: none;
+  border-radius: 12px;
+}
+
+#id-player-time {
+    position: absolute;
+    top: 285px;
+    margin: 0 30px ;
+
+
+}
+.player-time {
+    display: inline-block;
+    color: white;
+    font-family:"Arial", "Courier New", Georgia, ;
+}
+
+.songs-list {
+    display: none;
+}
